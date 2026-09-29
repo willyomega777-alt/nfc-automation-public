@@ -18,7 +18,7 @@ SMTP_PASS = os.environ.get('EMAIL_PASS')
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-LIMITE_DIARIO = 60 
+LIMITE_DIARIO = 45 
 # Tiempos de espera en segundos (300 a 900 = entre 5 y 15 minutos de pausa por correo)
 ESPERA_MINIMA = 180
 ESPERA_MAXIMA = 300
