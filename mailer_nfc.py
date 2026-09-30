@@ -118,8 +118,8 @@ def send_email(to_email, subject, body_html):
     msg.attach(MIMEText(body_html, 'html'))
     
     try:
-        server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
-        server.starttls()
+        # Usamos SMTP_SSL directamente al tratarse del puerto 465
+        server = smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT)
         server.login(SMTP_USER, SMTP_PASS)
         server.send_message(msg)
         server.quit()
