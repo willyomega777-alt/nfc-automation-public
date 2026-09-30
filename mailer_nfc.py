@@ -12,9 +12,12 @@ from supabase import create_client, Client
 SUPABASE_URL = os.environ.get('SUPABASE_URL')
 SUPABASE_KEY = os.environ.get('SUPABASE_KEY')
 
-# Cambiamos los nombres aquí para que coincidan con el resto de tu código
 SMTP_USER = os.environ.get('EMAIL_ORIGEN')
 SMTP_PASS = os.environ.get('EMAIL_PASS')
+
+# --- ESTAS DOS LÍNEAS SON LAS QUE FALTAN ---
+SMTP_HOST = "smtp.hostinger.com" 
+SMTP_PORT = 465                   
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
